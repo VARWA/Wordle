@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import QWidget, QPushButton, QGridLayout, QVBoxLayout, QMes
 
 from constants import WORDS, RUS_ALPHABET
 from current_game_data import CurrentEventData
-from widgets import WordOnTable
+from letter_model import WordOnTable
 
 
 class GameScreen(QWidget):
@@ -16,7 +16,6 @@ class GameScreen(QWidget):
         self.restart_game_button.setCheckable(True)
         self.v1layout.addWidget(self.restart_game_button)
         self.restart_game_button.clicked.connect(lambda x: self.reset_game(win=False))
-
         self.new_game()
 
         self.setLayout(self.v1layout)

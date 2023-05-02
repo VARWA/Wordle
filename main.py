@@ -8,12 +8,9 @@ class Window(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Wordle")
-        self.setFixedSize(QSize(350, 500))
+        self.setFixedSize(QSize(230, 300))
         self.game = GameScreen()
-        self.start_game()
-
-    def start_game(self):
-        self.game.show()
+        self.setCentralWidget(self.game)
 
 
 if __name__ == "__main__":
