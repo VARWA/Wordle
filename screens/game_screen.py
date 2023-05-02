@@ -49,7 +49,7 @@ class GameScreen(QWidget):
 
     def init_map(self):
         self.grid = QGridLayout()
-        self.grid.setSpacing(1)
+        self.grid.setSpacing(3)
 
         for i in range(0, 6):
             for j in range(0, 5):
@@ -103,12 +103,12 @@ class GameScreen(QWidget):
         for i in range(len(current_word)):
             symbol = current_word[i]
             if self.answer[i] == current_word[i]:
-                self.set_table_element(text=symbol, color='green', string=number_of_string, column=i)
+                self.set_table_element(text=symbol, color='rgb(40,181,22)', string=number_of_string, column=i)
                 counter += 1
             elif current_word[i] in self.answer:
-                self.set_table_element(text=symbol, color='yellow', string=number_of_string, column=i)
+                self.set_table_element(text=symbol, color='rgb(242,233,28)', string=number_of_string, column=i)
             else:
-                self.set_table_element(text=symbol, color='grey', string=number_of_string, column=i)
+                self.set_table_element(text=symbol, color='lightgrey', string=number_of_string, column=i)
         if counter == 5:
             self.current_data.game_is_going = False
             self.reset_game(win=True)
