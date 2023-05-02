@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QSize
-from PyQt6.QtWidgets import QPushButton, QLabel
+from PyQt6.QtWidgets import QPushButton
 
 
 class WordOnTable(QPushButton):
@@ -10,5 +10,5 @@ class WordOnTable(QPushButton):
         self.setEnabled(False)
         self.setText(text)
         self.setFixedSize(QSize(40, 40))
-        self.setStyleSheet(":disabled { color: black; background-color: " + color + " }")
+        self.setStyleSheet(":disabled {font: bold; font-size: 18px; color: black ;background-color: " + color + "}")
 

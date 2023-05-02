@@ -79,6 +79,8 @@ class GameScreen(QWidget):
 
     def add_letter(self, letter):
         data = self.current_data
+        if data.word_is_unsecreted:
+            return
         data.current_word.append(letter)
         self.new_letter(data.count_strings, len(data.current_word) - 1, letter)
 
@@ -91,7 +93,6 @@ class GameScreen(QWidget):
         if data.count_strings == 6:
             self.reset_game(win=False)
             data.game_is_going = False
-            print(self.answer)
 
     def remove_letter(self):
         if len(self.current_data.current_word):
