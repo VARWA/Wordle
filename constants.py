@@ -16,3 +16,6 @@ WORDS = ['АБРЕК', 'АКТИВ', 'АМЕБА', 'АРЕНА', 'АФЕРА', '
          'ЭМАЛЬ', 'ЭСКИЗ', 'ЭЛИТА', 'ЭКРАН', 'ЮНИОР', 'ЮРИСТ', 'ЮНОША', 'ЮНКЕР', 'ЯГУАР', 'ЯСЕНЬ', 'ЯГОДА',
          'ЯХОНТ', 'ЯКОРЬ', 'ЯРЛЫК']
 
+LETTER_ON_TRUE_POSITION_COLOR = 'rgb(40,181,22)'
+LETTER_ON_ANOTHER_POSITION_COLOR = 'rgb(242,233,28)'
+LETTER_NO_HAVE_POSITION_COLOR = 'lightgrey'
